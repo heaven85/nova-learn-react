@@ -13,6 +13,9 @@ axios.interceptors.request.use(function (config) {
 );
 const NOVALEARN_BACKEND_URL = "http://localhost:8080/api/nova-learn";
 
+export const getAllLessonsByCourseApiCall = (courseId:number )=>
+    axios.get(`${NOVALEARN_BACKEND_URL}/list-lessons/${courseId}`);
+
 export const createCourseLessons = (courseLessonDto:CourseLessonDto)=>
     axios.post(`${NOVALEARN_BACKEND_URL}/create-lesson`, courseLessonDto);
 
