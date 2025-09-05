@@ -10,6 +10,7 @@ import CreateCourse from "./components/CreateCourse";
 import DataEntry from "./components/DataEntry";
 import CourseTable from "./components/CourseTable";
 import CreateLessons from "./components/CreateLessons";
+import CourseLessonsTable from "./components/CourseLessonsTable";
 
 
 
@@ -43,6 +44,7 @@ export default function App() {
             { beTeacher ? <Route path="data-entry" element={<DataEntry />} /> : "" }
             { beTeacher ? <Route path="course-table" element={<CourseTable />} /> : "" }
             { beTeacher ? <Route path="create-lessons/:id" element={<CreateLessons />} /> : "" }
+            { beTeacher ? <Route path="list-course-lessons/:id" element={<CourseLessonsTable />} /> : "" }
             </Route>
         </Routes>
        </BrowserRouter>
